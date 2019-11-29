@@ -9,6 +9,7 @@ def add_to_16(value):
     while len(value) % 16 != 0:
         value += '\0'
     return str.encode(value)  # 返回bytes
+
 #加密方法
 def encrypt_oracle(encrypt_text):
     # 秘钥
@@ -20,6 +21,7 @@ def encrypt_oracle(encrypt_text):
     #用base64转成字符串形式
     encrypted_text = str(base64.encodebytes(encrypt_aes), encoding='utf-8')  # 执行加密并转码返回bytes
     print(encrypted_text)
+    
 #解密方法
 def decrypt_oralce(decrypt_text):
     # 秘钥
